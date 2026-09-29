@@ -15,7 +15,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="navbar-brand">
-          🐾 Tefa Salcedo
+          Tefa Salcedo
         </Link>
         <ul className="navbar-links">
           {links.map(({ to, label }) => (

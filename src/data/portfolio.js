@@ -222,7 +222,6 @@ export const proyectosDestacados = [
 export const proyectosAprendizaje = [
   { nombre: 'FrontendChallenges', descripcion: 'Retos de devchallenges.io completados.', url: 'https://github.com/TefaSalcedo/FrontendChallenges', tech: 'HTML/CSS' },
   { nombre: 'TimerStudy', descripcion: 'Temporizador de estudio desplegado en GitHub Pages.', url: 'https://github.com/TefaSalcedo/TimerStudy', tech: 'JavaScript' },
-  { nombre: 'moviebase', descripcion: 'App de películas consumiendo APIs.', url: 'https://github.com/TefaSalcedo/moviebase', tech: 'JavaScript' },
   { nombre: 'finance-tracker', descripcion: 'Rastreador de finanzas personales.', url: 'https://github.com/TefaSalcedo/finance-tracker', tech: 'JavaScript' },
   { nombre: 'Project-gifs-react', descripcion: 'Buscador de GIFs con React.', url: 'https://github.com/TefaSalcedo/Project-gifs-react', tech: 'React' },
   { nombre: 'frontend-landingpage', descripcion: 'Landing con GSAP, Spline y Strapi.', url: 'https://github.com/TefaSalcedo/frontend-landingpage', tech: 'JavaScript' },
