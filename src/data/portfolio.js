@@ -222,7 +222,6 @@ export const proyectosDestacados = [
 export const proyectosAprendizaje = [
   { nombre: 'FrontendChallenges', descripcion: 'Retos de devchallenges.io completados.', url: 'https://github.com/TefaSalcedo/FrontendChallenges', tech: 'HTML/CSS' },
   { nombre: 'TimerStudy', descripcion: 'Temporizador de estudio desplegado en GitHub Pages.', url: 'https://github.com/TefaSalcedo/TimerStudy', tech: 'JavaScript' },
-  { nombre: 'moviebase', descripcion: 'App de películas consumiendo APIs.', url: 'https://github.com/TefaSalcedo/moviebase', tech: 'JavaScript' },
   { nombre: 'finance-tracker', descripcion: 'Rastreador de finanzas personales.', url: 'https://github.com/TefaSalcedo/finance-tracker', tech: 'JavaScript' },
   { nombre: 'Project-gifs-react', descripcion: 'Buscador de GIFs con React.', url: 'https://github.com/TefaSalcedo/Project-gifs-react', tech: 'React' },
   { nombre: 'frontend-landingpage', descripcion: 'Landing con GSAP, Spline y Strapi.', url: 'https://github.com/TefaSalcedo/frontend-landingpage', tech: 'JavaScript' },
@@ -231,9 +230,6 @@ export const proyectosAprendizaje = [
   { nombre: 'TareasJavaScript', descripcion: 'Ejercicios de fundamentos de JS.', url: 'https://github.com/TefaSalcedo/TareasJavaScript', tech: 'JavaScript' },
   { nombre: 'motion (backend + frontend)', descripcion: 'Exploración de animaciones y full stack.', url: 'https://github.com/TefaSalcedo/motion-backend', tech: 'Python + JS' },
   { nombre: 'libro-desarrollo-web', descripcion: 'Notas y código del estudio de desarrollo web.', url: 'https://github.com/TefaSalcedo/libro-desarrollo-web', tech: 'Python' },
-  { nombre: 'Strapi-first-step', descripcion: 'Primeros pasos con Strapi CMS.', url: 'https://github.com/TefaSalcedo/Strapi-first-step', tech: 'Strapi' },
-  { nombre: 'email-MJML', descripcion: 'Plantillas de email con MJML.', url: 'https://github.com/TefaSalcedo/email-MJML', tech: 'MJML' },
-  { nombre: 'cv_ejemplo', descripcion: 'Práctica de CSS Flexbox.', url: 'https://github.com/TefaSalcedo/cv_ejemplo', tech: 'HTML/CSS' },
 ];
 
 export const idiomas = [

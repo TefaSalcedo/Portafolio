@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
+import LogoGato from './LogoGato';
 
 const links = [
   { to: '/', label: 'Inicio' },
@@ -15,7 +16,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="navbar-brand">
-          🐾 Tefa Salcedo
+          <LogoGato />
+          Tefa Salcedo
         </Link>
         <ul className="navbar-links">
           {links.map(({ to, label }) => (
