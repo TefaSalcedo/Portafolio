@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { perfil, proyectosDestacados } from '../data/portfolio';
 import ProjectGrid from '../components/projects/ProjectGrid';
+import VideoHero from '../components/video/VideoHero';
 import { usePrefersReducedMotion } from '../animaciones/usePrefersReducedMotion';
 
 function Home() {
@@ -50,6 +51,15 @@ function Home() {
           <Link className="btn btn-primario" to="/proyectos">Ver mis proyectos</Link>
           <Link className="btn btn-secundario" to="/contacto">Contáctame</Link>
         </div>
+      </section>
+
+      <section className="section">
+        <h2 className="section-title">🎬 De ingeniería a código</h2>
+        <VideoHero
+          src="/video/ingeniera-a-dev.mp4"
+          poster="/video/ingeniera-a-dev-poster.jpg"
+          titulo="Mi transición de ingeniera civil a desarrolladora"
+        />
       </section>
 
       <section className="section">

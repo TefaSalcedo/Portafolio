@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import { useRevealAnimations } from '../animaciones/useRevealAnimations';
+import { useCardTilt } from '../animaciones/useCardTilt';
 
 // Pages
 import Home from '../pages/Home';
@@ -16,6 +17,7 @@ import Stack from '../pages/Stack';
 
 function Animaciones() {
   useRevealAnimations();
+  useCardTilt();
   return null;
 }
 

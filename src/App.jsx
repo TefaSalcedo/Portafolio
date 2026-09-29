@@ -14,7 +14,7 @@ function App() {
       sessionStorage.setItem('splash-visto', '1');
     }, 1500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [cargando]);
 
   return (
     <>
