@@ -1,14 +1,44 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
 import { perfil, proyectosDestacados } from '../data/portfolio';
 import ProjectGrid from '../components/projects/ProjectGrid';
 
 function Home() {
   const destacados = proyectosDestacados.slice(0, 3);
 
+  useEffect(() => {
+    // Si el splash aún está visible, esperamos a que termine para entrar.
+    const delay = sessionStorage.getItem('splash-visto') ? 0 : 1.55;
+
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({ defaults: { ease: 'power3.out' }, delay })
+        .from('.hero-avatar', {
+          scale: 0,
+          rotation: -20,
+          duration: 0.7,
+          ease: 'back.out(1.8)',
+        })
+        .from('.hero h1', { y: 30, opacity: 0, duration: 0.6 }, '-=0.3')
+        .from('.hero .rol', { y: 20, opacity: 0, duration: 0.5 }, '-=0.35')
+        .from('.hero .resumen', { y: 16, opacity: 0, duration: 0.5 }, '-=0.3')
+        .from(
+          '.hero .botones .btn',
+          { y: 14, opacity: 0, stagger: 0.1, duration: 0.4 },
+          '-=0.25'
+        );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="page">
       <section className="hero">
-        <div className="hero-avatar" aria-hidden="true">🐱</div>
+        <div className="hero-avatar-wrap">
+          <div className="hero-avatar" aria-hidden="true">🐱</div>
+        </div>
         <h1>Hola, soy {perfil.nombre} 💕</h1>
         <p className="rol">{perfil.titulo}</p>
         <p className="resumen">{perfil.resumen}</p>
