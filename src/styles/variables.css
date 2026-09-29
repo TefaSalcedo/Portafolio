@@ -1,16 +1,16 @@
 :root {
-  --color-bg: #fdf6f9;
-  --color-bg-soft: #fbeef4;
+  --color-bg: #fff5f8;
+  --color-bg-soft: #ffe9f1;
   --color-card: #ffffff;
-  --color-text: #4a3b47;
-  --color-text-soft: #7a6473;
-  --color-primary: #e78fb3;
-  --color-primary-dark: #c96e96;
-  --color-accent: #a78bda;
-  --color-mint: #9adbc8;
+  --color-text: #4a2f3d;
+  --color-text-soft: #8a6275;
+  --color-primary: #ec5c9c;
+  --color-primary-dark: #c9427f;
+  --color-accent: #ff85a9;
   --color-peach: #ffc9a3;
-  --color-border: #f0d9e4;
-  --shadow-card: 0 6px 24px rgba(201, 110, 150, 0.12);
+  --color-border: #ffd3e2;
+  --shadow-card: 0 6px 24px rgba(236, 92, 156, 0.14);
+  --shadow-hover: 0 14px 36px rgba(236, 92, 156, 0.22);
   --radius: 18px;
   --radius-sm: 10px;
   --font-main: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;

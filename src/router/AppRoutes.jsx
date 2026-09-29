@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
+import { useRevealAnimations } from '../animaciones/useRevealAnimations';
+import { useCardTilt } from '../animaciones/useCardTilt';
 
 // Pages
 import Home from '../pages/Home';
@@ -13,10 +15,17 @@ import Playground from '../pages/Playground';
 import Certificados from '../pages/Certificados';
 import Stack from '../pages/Stack';
 
+function Animaciones() {
+  useRevealAnimations();
+  useCardTilt();
+  return null;
+}
+
 function AppRoutes() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <Animaciones />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
