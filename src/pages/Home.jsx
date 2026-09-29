@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { perfil, proyectosDestacados } from '../data/portfolio';
 import ProjectGrid from '../components/projects/ProjectGrid';
+import { usePrefersReducedMotion } from '../animaciones/usePrefersReducedMotion';
 
 function Home() {
   const destacados = proyectosDestacados.slice(0, 3);
+  const reduced = usePrefersReducedMotion();
 
   useEffect(() => {
+    if (reduced) return;
+
     // Si el splash aún está visible, esperamos a que termine para entrar.
     const delay = sessionStorage.getItem('splash-visto') ? 0 : 1.55;
 
@@ -31,7 +35,7 @@ function Home() {
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [reduced]);
 
   return (
     <div className="page">
