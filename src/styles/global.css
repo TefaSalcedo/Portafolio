@@ -92,9 +92,20 @@ a:hover {
 }
 
 .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--color-text);
+}
+
+.logo-gato {
+  transition: transform 0.25s ease;
+}
+
+.navbar-brand:hover .logo-gato {
+  transform: rotate(-8deg) scale(1.1);
 }
 
 .navbar-links {
