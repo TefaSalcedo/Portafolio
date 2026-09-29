@@ -3,10 +3,16 @@ import AppRoutes from './router/AppRoutes';
 import Splash from './components/splash/Splash';
 
 function App() {
-  const [cargando, setCargando] = useState(true);
+  const [cargando, setCargando] = useState(
+    () => !sessionStorage.getItem('splash-visto')
+  );
 
   useEffect(() => {
-    const timer = setTimeout(() => setCargando(false), 1500);
+    if (!cargando) return;
+    const timer = setTimeout(() => {
+      setCargando(false);
+      sessionStorage.setItem('splash-visto', '1');
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
