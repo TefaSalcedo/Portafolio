@@ -1,5 +1,8 @@
 // src/router/AppRoutes.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+import ScrollToTop from '../components/layout/ScrollToTop';
 
 // Pages
 import Home from '../pages/Home';
@@ -13,6 +16,8 @@ import Stack from '../pages/Stack';
 function AppRoutes() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cv" element={<SobreMi />} />
@@ -21,7 +26,9 @@ function AppRoutes() {
         <Route path="/playground" element={<Playground />} />
         <Route path="/certificados" element={<Certificados />} />
         <Route path="/stack" element={<Stack />} />
+        <Route path="*" element={<Home />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

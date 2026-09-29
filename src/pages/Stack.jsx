@@ -1,9 +1,24 @@
-// AQUI COSAS QUE SE SUPONE QUE SE
+import { stack } from '../data/portfolio';
+
 function Stack() {
   return (
-    <div>
-      <h1>🧰 Stack tecnológico</h1>
-      <p>Estas son las tecnologías con las que trabajo y disfruto usar 💻💖</p>
+    <div className="page">
+      <h1 className="page-title">🧰 Stack tecnológico</h1>
+      <p className="page-subtitle">
+        Las tecnologías con las que trabajo — y las que estoy aprendiendo activamente.
+      </p>
+      <div className="grid">
+        {stack.map((grupo) => (
+          <div key={grupo.grupo} className="stack-grupo">
+            <h3>{grupo.grupo}</h3>
+            <div className="tags">
+              {grupo.items.map((item) => (
+                <span key={item} className="tag">{item}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
