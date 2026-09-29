@@ -19,16 +19,22 @@ export function useRevealAnimations() {
     if (reduced) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        '.page-title',
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', clearProps: 'transform' }
-      );
-      gsap.fromTo(
-        '.page-subtitle',
-        { opacity: 0, y: 16 },
-        { opacity: 1, y: 0, duration: 0.5, delay: 0.12, ease: 'power3.out', clearProps: 'transform' }
-      );
+      const titulo = document.querySelector('.page-title');
+      const subtitulo = document.querySelector('.page-subtitle');
+      if (titulo) {
+        gsap.fromTo(
+          titulo,
+          { opacity: 0, y: 24 },
+          { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', clearProps: 'transform' }
+        );
+      }
+      if (subtitulo) {
+        gsap.fromTo(
+          subtitulo,
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.5, delay: 0.12, ease: 'power3.out', clearProps: 'transform' }
+        );
+      }
 
       const elementos = gsap.utils.toArray(SELECTORES);
       if (!elementos.length) return;
