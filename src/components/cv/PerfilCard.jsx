@@ -3,7 +3,9 @@ import { perfil } from '../../data/portfolio';
 function PerfilCard() {
   return (
     <div className="perfil-card">
-      <div className="perfil-avatar" aria-hidden="true">👩‍💻</div>
+      <div className="perfil-avatar">
+        <img src="/perfil.jpg" alt={`Foto de ${perfil.nombre}`} />
+      </div>
       <div className="perfil-info">
         <h2>{perfil.nombre}</h2>
         <p className="meta">

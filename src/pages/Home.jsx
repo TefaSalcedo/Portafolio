@@ -42,7 +42,9 @@ function Home() {
     <div className="page">
       <section className="hero">
         <div className="hero-avatar-wrap">
-          <div className="hero-avatar" aria-hidden="true">🐱</div>
+          <div className="hero-avatar">
+            <img src="/perfil.jpg" alt={`Foto de ${perfil.nombre}`} />
+          </div>
         </div>
         <h1>Hola, soy {perfil.nombre} 💕</h1>
         <p className="rol">{perfil.titulo}</p>
